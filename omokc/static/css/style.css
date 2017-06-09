@@ -37,3 +37,9 @@ body {
 .jumbotron {
   background: rgba(0,0,0,.1); /* For browsers that do not support gradients */
 }
+.flash {
+  background-color: #fbb0b0;
+  padding: 5px;
+  border-radius: 2px;
+  margin-top: 1px;
+}

@@ -1,12 +1,9 @@
-from wtforms import Form, StringField, TextAreaField, SubmitField, validators
+from flask_wtf import FlaskForm
+from wtforms import Form, TextField, TextAreaField, SubmitField, validators, ValidationError
 
-def CheckNameLength(form, field):
-    if len(field.data) < 5:
-        raise ValidationError('Message must have more than 4 characters')
-
-class ContactForm(Form):
-    name = StringField("Name", [validators.DataRequired()])
-    email = StringField("Email", [validators.DataRequired(), validators.Email('your@email.com')])
-    subject = StringField("Subject")
-    message = TextAreaField("Message", [validators.DataRequired(), CheckNameLength])
+class ContactForm(FlaskForm):
+    name = TextField("Name", [validators.DataRequired('Please enter your name.')])
+    email = TextField("Email", [validators.DataRequired('Please enter your email.'), validators.Email('Please enter your email.')])
+    # subject = StringField("Subject")
+    message = TextAreaField("Message", [validators.DataRequired('Please enter a message.')])
     submit = SubmitField("Send")
