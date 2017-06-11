@@ -7,3 +7,5 @@ class ContactForm(FlaskForm):
     # subject = StringField("Subject")
     message = TextAreaField("Message", [validators.DataRequired('Please enter a message.')])
     submit = SubmitField("Send")
+    
+    # testing git on two computers
