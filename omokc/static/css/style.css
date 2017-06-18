@@ -11,8 +11,8 @@ body {
   background: rgba(255,255,255,0);
 }
 .navbar-brand {
-  font-size: 175%;
-  font-weight: 700;
+    font-size: 200%;
+    font-weight: 800;
 }
 .navbar-header > a:hover {
   color: rgba(200,0,0,.7);
