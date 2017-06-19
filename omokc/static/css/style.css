@@ -14,6 +14,9 @@ body {
     font-size: 200%;
     font-weight: 800;
 }
+.navbar-header button {
+  background-color: #fff;
+}
 .navbar-header > a:hover {
   color: #009900;
   /*color: rgba(200,0,0,.7);*/
@@ -24,9 +27,6 @@ body {
 #navbar ul li:hover a {
   color: #009900;
   /*color: rgba(200,0,0,.7);*/
-}
-.icon-bar {
-    
 }
 #headerSpace {
   height: 40px;
@@ -41,8 +41,8 @@ body {
 }
 .jumbotron {
   background: rgba(0,0,0,.1); /* For browsers that do not support gradients */
-  border-top: 2px solid #009900;
-  border-bottom: 1px solid #009900;
+  /*border-top: 2px solid #009900;
+  border-bottom: 1px solid #009900;*/
 }
 
 .flash {
