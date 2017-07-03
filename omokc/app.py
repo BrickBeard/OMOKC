@@ -1,3 +1,7 @@
+import os
+import sys
+sys.path.insert(0, '/home/skbolay/public_html/cgi-bin/venv/lib/python3.6/site-packages')
+
 from flask import Flask, render_template, request, flash
 from forms import ContactForm
 from flask_mail import Mail, Message
