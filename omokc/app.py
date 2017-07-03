@@ -6,12 +6,12 @@ from flask import Flask, render_template, request, flash
 from forms import ContactForm
 from flask_mail import Mail, Message
 
-# mail = Mail()
+mail = Mail()
 
 app = Flask(__name__)
-# app.secret_key = 'K&Dj83*@k)jh!lJ;l_x'
+app.secret_key = 'K&Dj83*@k)jh!lJ;l_x'
 
-# mail.init_app(app)
+mail.init_app(app)
 
 @app.route('/')
 def home():
