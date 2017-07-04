@@ -1,3 +1,6 @@
+* {
+	font-family: 'Roboto', sans-serif;
+}
 body {
   /*background-color: #fff;*/
   background: #fff; /* For browsers that do not support gradients */
@@ -31,7 +34,12 @@ body {
   height: 40px;
   background-color: rgba(255,255,255,0);
 }
-
+/*-----------------------  NAVBAR  -----------------------*/
+.jumbotron {
+  background: rgba(0,0,0,.1); /* For browsers that do not support gradients */
+  /*border-top: 2px solid #009900;
+  border-bottom: 1px solid #009900;*/
+}
 
 /*-----------------------  FOOTER  -----------------------*/
 .footer {
@@ -103,15 +111,12 @@ body {
 }
 
 
-.jumbotron {
-  background: rgba(0,0,0,.1); /* For browsers that do not support gradients */
-  /*border-top: 2px solid #009900;
-  border-bottom: 1px solid #009900;*/
+
+
+/*-----------------------  MEDIA QUERIES  -----------------------*/
+
+@media only screen and (max-width: 768px) {
+	
 }
 
-.flash {
-  background-color: #fbb0b0;
-  padding: 5px;
-  border-radius: 2px;
-  margin-top: 1px;
-}
+
