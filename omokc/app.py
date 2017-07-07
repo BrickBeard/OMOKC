@@ -13,17 +13,20 @@ app.secret_key = 'K&Dj83*@k)jh!lJ;l_x'
 
 mail.init_app(app)
 
+omEmail = 'omokc@gmail.com'
+omPhone = '(405) 840-3119'
+
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', omEmail=omEmail, omPhone=omPhone)
 
 @app.route('/home')
 def home1():
-    return render_template('index.html')
+    return render_template('index.html', omEmail=omEmail, omPhone=omPhone)
 
 @app.route('/info')
 def info():
-    return render_template('information.html')
+    return render_template('information.html', omEmail=omEmail, omPhone=omPhone)
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -31,7 +34,7 @@ def contact():
     if request.method == "POST":
         if form.validate() == False:
             flash('All fields are required.')
-            return render_template('contact.html', form=form)
+            return render_template('contact.html', form=form, omEmail=omEmail, omPhone=omPhone)
         else:
             msg = Message('Message from your OMOKC.com' + form.name.data, sender='brickbeard.io@gmail.com', recipients=['brickbeard.io@gmail.com', 'brandonsmith.brick@gmail.com'])
             msg.body = """
@@ -39,9 +42,9 @@ def contact():
             %s
             """ % (form.name.data, form.email.data, form.message.data)
             mail.send(msg)
-            return render_template('contact.html', success=True)
+            return render_template('contact.html', success=True, omEmail=omEmail, omPhone=omPhone)
     elif request.method == 'GET':
-        return render_template('contact.html', form=form)
+        return render_template('contact.html', form=form, omEmail = omEmail, omPhone=omPhone)
 
 
 if __name__ == '__main__':
