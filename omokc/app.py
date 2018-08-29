@@ -9,12 +9,12 @@ from flask_mail import Mail, Message
 mail = Mail()
 
 app = Flask(__name__)
-app.secret_key = 'K&Dj83*@k)jh!lJ;l_x'
+app.secret_key = 'testtest12345'
 
 mail.init_app(app)
 
-omEmail = 'omokc@gmail.com'
-omPhone = '(405) 840-3119'
+omEmail = 'sample_email@gmail.com'
+omPhone = '(444) 123-4567'
 
 @app.route('/')
 def home():
@@ -36,7 +36,7 @@ def contact():
             flash('All fields are required.')
             return render_template('contact.html', form=form, omEmail=omEmail, omPhone=omPhone)
         else:
-            msg = Message('Message from your OMOKC.com' + form.name.data, sender='brickbeard.io@gmail.com', recipients=['brickbeard.io@gmail.com', 'brandonsmith.brick@gmail.com'])
+            msg = Message('Message from your OMOKC.com' + form.name.data, sender='brickbeard.io@gmail.com', recipients=['brickbeard.io@gmail.com'])
             msg.body = """
             From: %s <%s>,
             %s
