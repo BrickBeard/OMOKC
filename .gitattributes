@@ -1,3 +1,4 @@
 omokc/templates/contact.html linguist-vendored
 omokc/templates/information.html linguist-vendored
-omokc/static/ linguist-vendored
+omokc/templates/index.html linguist-vendored
+omokc/static/* linguist-vendored
