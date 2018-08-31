@@ -1,2 +1,2 @@
-omokc/static/* linguist-vendored
-omokc/templates/* linguist-vendored
+omokc/templates/contact.html linguist-vendored
+omokc/templates/information.html linguist-vendored
